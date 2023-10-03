@@ -1,0 +1,178 @@
+Trial 4 Complete [00h 00m 27s]
+val_mean_absolute_error: 0.25751060992479324
+
+Best val_mean_absolute_error So Far: 0.08435463905334473
+Total elapsed time: 00h 01m 37s
+INFO:tensorflow:Oracle triggered exit
+Results summary
+Results in random_search\hyper_model
+Showing 10 best trials
+Objective(name="val_mean_absolute_error", direction="min")
+
+Trial 0 summary
+Hyperparameters:
+conv1d_1_filters: 96
+conv1d_1_kernel_size: 1
+conv1d_2_filters: 96
+conv1d_2_kernel_size: 1
+use_extra_conv1d_layer: 1
+dropout: 0.25
+use_extra_extra_conv1d_layer: 1
+pooling: max
+lstm_units: 128
+learning_rate: 0.003701703419771772
+conv1d_3_filters: 32
+conv1d_3_kernel_size: 1
+conv1d_4_filters: 32
+conv1d_4_kernel_size: 1
+Score: 0.08435463905334473
+
+Trial 1 summary
+Hyperparameters:
+conv1d_1_filters: 64
+conv1d_1_kernel_size: 2
+conv1d_2_filters: 128
+conv1d_2_kernel_size: 2
+use_extra_conv1d_layer: 0
+dropout: 0.5
+use_extra_extra_conv1d_layer: 0
+pooling: max
+lstm_units: 64
+learning_rate: 0.00011704215137153513
+conv1d_3_filters: 128
+conv1d_3_kernel_size: 2
+conv1d_4_filters: 64
+conv1d_4_kernel_size: 2
+Score: 0.23390094935894012
+
+Trial 3 summary
+Hyperparameters:
+conv1d_1_filters: 32
+conv1d_1_kernel_size: 1
+conv1d_2_filters: 96
+conv1d_2_kernel_size: 3
+use_extra_conv1d_layer: 1
+dropout: 0.0
+use_extra_extra_conv1d_layer: 1
+pooling: max
+lstm_units: 64
+learning_rate: 5.220919255241181e-05
+conv1d_3_filters: 64
+conv1d_3_kernel_size: 3
+conv1d_4_filters: 96
+conv1d_4_kernel_size: 3
+Score: 0.25751060992479324
+
+Trial 2 summary
+Hyperparameters:
+conv1d_1_filters: 96
+conv1d_1_kernel_size: 1
+conv1d_2_filters: 64
+conv1d_2_kernel_size: 2
+use_extra_conv1d_layer: 1
+dropout: 0.5
+use_extra_extra_conv1d_layer: 1
+pooling: avg
+lstm_units: 32
+learning_rate: 2.5725013382373648e-05
+conv1d_3_filters: 64
+conv1d_3_kernel_size: 3
+conv1d_4_filters: 128
+conv1d_4_kernel_size: 3
+Score: 0.31509004533290863
+
+OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                
+OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                
+OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                
+OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                
+OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                
+OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                OOOOOOOOOOOOOOOO                
+
+
+
+
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d (Conv1D)             (None, 60, 96)            1824      
+                                                                 
+ conv1d_1 (Conv1D)           (None, 60, 96)            9312      
+                                                                 
+ conv1d_2 (Conv1D)           (None, 60, 32)            3104      
+                                                                 
+ dropout (Dropout)           (None, 60, 32)            0         
+                                                                 
+ conv1d_3 (Conv1D)           (None, 60, 32)            1056      
+                                                                 
+ max_pooling1d (MaxPooling1  (None, 30, 32)            0         
+ D)                                                              
+                                                                 
+ lstm (LSTM)                 (None, 128)               82432     
+                                                                 
+ dropout_1 (Dropout)         (None, 128)               0         
+                                                                 
+ dense (Dense)               (None, 60)                7740      
+                                                                 
+=================================================================
+Total params: 105468 (411.98 KB)
+Trainable params: 105468 (411.98 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d (Conv1D)             (None, 59, 64)            2368      
+                                                                 
+ conv1d_1 (Conv1D)           (None, 58, 128)           16512     
+                                                                 
+ dropout (Dropout)           (None, 58, 128)           0         
+                                                                 
+ max_pooling1d (MaxPooling1  (None, 29, 128)           0         
+ D)                                                              
+                                                                 
+ lstm (LSTM)                 (None, 64)                49408     
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 60)                3900      
+                                                                 
+=================================================================
+Total params: 72188 (281.98 KB)
+Trainable params: 72188 (281.98 KB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d (Conv1D)             (None, 60, 32)            608       
+                                                                 
+ conv1d_1 (Conv1D)           (None, 58, 96)            9312      
+                                                                 
+ conv1d_2 (Conv1D)           (None, 56, 64)            18496     
+                                                                 
+ dropout (Dropout)           (None, 56, 64)            0         
+                                                                 
+ conv1d_3 (Conv1D)           (None, 54, 96)            18528     
+                                                                 
+ max_pooling1d (MaxPooling1  (None, 27, 96)            0         
+ D)                                                              
+                                                                 
+ lstm (LSTM)                 (None, 64)                41216     
+                                                                 
+ dropout_1 (Dropout)         (None, 64)                0         
+                                                                 
+ dense (Dense)               (None, 60)                3900      
+                                                                 
+=================================================================
+Total params: 92060 (359.61 KB)
+Trainable params: 92060 (359.61 KB)
+Non-trainable params: 0 (0.00 Byte)
+
+
+
+
+
+

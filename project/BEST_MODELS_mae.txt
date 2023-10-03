@@ -1,0 +1,68 @@
+
+Trial 1 summary
+Hyperparameters:
+conv1d_1_filters: 32
+conv1d_1_kernel_size: 3
+conv1d_2_filters: 96
+conv1d_2_kernel_size: 2
+use_extra_conv1d_layer: 1
+dropout: 0.0
+use_extra_extra_conv1d_layer: 1
+pooling: max
+lstm_units: 32
+learning_rate: 0.0016140558414823223
+conv1d_3_filters: 32
+conv1d_3_kernel_size: 1
+conv1d_4_filters: 32
+conv1d_4_kernel_size: 1
+Score: 0.05353100039064884
+
+Trial 2 summary
+Hyperparameters:
+conv1d_1_filters: 32
+conv1d_1_kernel_size: 3
+conv1d_2_filters: 32
+conv1d_2_kernel_size: 1
+use_extra_conv1d_layer: 1
+dropout: 0.25
+use_extra_extra_conv1d_layer: 1
+pooling: max
+lstm_units: 64
+learning_rate: 0.0029685544244879053
+conv1d_3_filters: 64
+conv1d_3_kernel_size: 3
+conv1d_4_filters: 96
+conv1d_4_kernel_size: 2
+Score: 0.06368609890341759
+
+Trial 0 summary
+Hyperparameters:
+conv1d_1_filters: 64
+conv1d_1_kernel_size: 1
+conv1d_2_filters: 128
+conv1d_2_kernel_size: 3
+use_extra_conv1d_layer: 0
+dropout: 0.25
+use_extra_extra_conv1d_layer: 0
+pooling: max
+lstm_units: 96
+learning_rate: 3.8497675374799876e-05
+Score: 0.1881062015891075
+
+Trial 3 summary
+Hyperparameters:
+conv1d_1_filters: 128
+conv1d_1_kernel_size: 2
+conv1d_2_filters: 32
+conv1d_2_kernel_size: 2
+use_extra_conv1d_layer: 0
+dropout: 0.25
+use_extra_extra_conv1d_layer: 0
+pooling: max
+lstm_units: 64
+learning_rate: 1.2256848755800014e-06
+conv1d_3_filters: 64
+conv1d_3_kernel_size: 3
+conv1d_4_filters: 64
+conv1d_4_kernel_size: 2
+Score: 0.2881137281656265
